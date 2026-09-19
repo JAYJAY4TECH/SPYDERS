@@ -14,7 +14,7 @@ const connectDB = require('./config/database');
 const app  = express();
 const PORT = process.env.PORT || 3555;
 
-connectDB();
+connectDB().catch(err => console.error('DB connect failed:', err.message));
 
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, crossOriginResourcePolicy: false }));
 app.use(morgan('dev'));
@@ -61,9 +61,14 @@ app.use((err, req, res, next) => {
   res.status(500).send('Server error: ' + err.message);
 });
 
-app.listen(PORT, () => {
-  console.log('');
-  console.log('  🕷️  SPYDERS CLOTHER running at http://localhost:' + PORT);
-  console.log('  🌍  ENV: ' + (process.env.NODE_ENV || 'development'));
-  console.log('');
-});
+// ---------- Start (local only) ----------
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log('SPYDERS CLOTHER running at http://localhost:' + PORT);
+    console.log('ENV: ' + (process.env.NODE_ENV || 'development'));
+  });
+}
+
+// ---------- Export for Vercel serverless ----------
+module.exports = app;
+
