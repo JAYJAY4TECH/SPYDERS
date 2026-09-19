@@ -1,0 +1,11 @@
+﻿const fs = require('fs');
+const p = 'views/index.html';
+let h = fs.readFileSync(p, 'utf8');
+h = h.replace('src="/images/spyders-1.jpg"', 'src="/images/spyders-8.jpg"');
+h = h.replace('src="/images/spyders-1.jpg"', 'src="/images/spyders-9.jpg"');
+h = h.replace('src="/images/spyders-4.jpg"', 'src="/images/spyders-10.jpg"');
+h = h.replace('src="/images/spyders-4.jpg"', 'src="/images/spyders-11.jpg"');
+h = h.replace('src="/images/spyders-5.jpg"', 'src="/images/spyders-12.jpg"');
+h = h.replace('src="/images/spyders-5.jpg"', 'src="/images/spyders-13.jpg"');
+fs.writeFileSync(p, h, 'utf8');
+console.log('OK done');
