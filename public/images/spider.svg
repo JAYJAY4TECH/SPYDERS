@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Body -->
+  <ellipse cx="100" cy="105" rx="18" ry="26" fill="currentColor"/>
+  <ellipse cx="100" cy="80"  rx="13" ry="15" fill="currentColor"/>
+  <!-- Eyes -->
+  <circle cx="94" cy="76" r="2" fill="#0a0a0a"/>
+  <circle cx="106" cy="76" r="2" fill="#0a0a0a"/>
+  <!-- Legs — 4 per side -->
+  <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+    <path d="M88 82 C70 70, 55 65, 40 60"/>
+    <path d="M88 92 C68 88, 50 88, 32 92"/>
+    <path d="M88 102 C68 105, 50 112, 32 122"/>
+    <path d="M90 112 C74 122, 62 136, 52 152"/>
+
+    <path d="M112 82 C130 70, 145 65, 160 60"/>
+    <path d="M112 92 C132 88, 150 88, 168 92"/>
+    <path d="M112 102 C132 105, 150 112, 168 122"/>
+    <path d="M110 112 C126 122, 138 136, 148 152"/>
+  </g>
+</svg>
