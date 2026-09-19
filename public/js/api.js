@@ -1,4 +1,4 @@
-﻿// SPYDERS CLOTHER — API helper
+// SPYDERS CLOTHER — API helper
 window.API = {
   base: '/api',
   async get(p) {

@@ -1,4 +1,4 @@
-﻿// SPYDERS CLOTHER — Cart engine (localStorage)
+// SPYDERS CLOTHER — Cart engine (localStorage)
 (function () {
   const KEY = 'spyders_cart_v1';
   const read  = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; } };
